@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
      <div>
-      <Header currentUser = "Fluke" islogIn  /> 
+      <Header currentUser = "Fluke" islogIn = {true} /> 
       <div>Fluke</div>
       <Footer />
       </div>
