@@ -8,6 +8,11 @@ class Footer extends Component{
         this.state = {
             time : 0 
         }
+        setInterval(()=>{
+            this.setState ({
+                time : this.state.time+1
+            })
+        },1000)
     }
     render (){
         let{time} = this.state;
