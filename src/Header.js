@@ -4,8 +4,12 @@ import React, {Component} from "react" ;
 
 class Header extends Component{
 
+    constructor(props){
+        super(props)
+        this.handleHeaderClicked = this.handleHeaderClicked.bind(this);
+    }
     handleHeaderClicked(){
-        alert ("Header Cliked");
+        alert (this.props.currentUser + "อย่ากด");
     }
 
     render (){
