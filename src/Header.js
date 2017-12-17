@@ -4,11 +4,17 @@ import React, {Component} from "react" ;
 
 class Header extends Component{
 
+    handleHeaderClicked(){
+        alert ("Header Cliked");
+    }
+
     render (){
         let {currentUser, islogIn} = this.props ;
         currentUser = "welcome " + currentUser;
+
+
         return (
-        <div> Header {islogIn &&  currentUser}</div>   
+        <div onClick={this.handleHeaderClicked}> Header {islogIn &&  currentUser}</div>   
         );
     }
 
