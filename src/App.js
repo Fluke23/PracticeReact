@@ -16,7 +16,7 @@ class App extends Component {
 
   addTodo(newTodo){
     this.setState ({
-      todoItems: this.state.todoItems.push(newTodo)  //ปุ่ม add
+      todoItems: this.state.todoItems.concat([newTodo])  //เปลี่ยนจากpushเป็น concat concatจะรับค่า array
     })
   }
 
