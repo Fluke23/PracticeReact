@@ -18,7 +18,7 @@ class Footer extends Component{
         let{time} = this.state;
         let{onTimeClick} = this.props
         return (
-            <div onClick={()=>onTimeClick(time)}>Footer online time {time}</div> 
+            <div onClick={()=> onTimeClick (time)}>Footer Online time {time}</div> 
         );
     }
 

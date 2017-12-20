@@ -8,6 +8,7 @@ class App extends Component {
 
     super(props)
     this.state = { currentTime: 0 }
+    this.handleFooterClicked = this.handleFooterClicked.bind(this)
   }
 
 handleFooterClicked(time){
