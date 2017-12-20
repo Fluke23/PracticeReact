@@ -18,11 +18,11 @@ class TodoInput extends Component{
    }
    
     render() {
-        let {onAddTodo} = this.props
+        let {newTodo} = this.state
        return(
            <div>
                ADD Todo 
-        <input onChange={(e) => this.setState({newTodo: e.target.value})}/>
+        <input value={newTodo} onChange={(e) => this.setState({newTodo: e.target.value})}/>
         <button onClick={this.addClicked}> Add </button>
             </div>
         )

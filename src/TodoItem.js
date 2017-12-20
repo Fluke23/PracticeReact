@@ -5,6 +5,7 @@ class TodoItem extends Component{
         let{text} =this.props
        return(
            <div>
+            <input type="checkbox" />
              {text}
             </div>
         )
