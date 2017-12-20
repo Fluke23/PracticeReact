@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Footer from './Footer'
+import TodoInput from './TodoInput';
+import TodoList from './TodoList'
 
 class App extends Component {
 
   constructor(props) {
 
     super(props)
-    this.state = { currentTime: 0 }
-    this.handleFooterClicked = this.handleFooterClicked.bind(this)
+    this.state = {
+        todoItems : []
+    }
+    
+   this.addTodo=this.addTodo.bind(this)
   }
 
-handleFooterClicked(time){
-  this.setState({currentTime:time })
-}
+  addTodo(newTodo){
+    this.setState ({
+      todoItems: this.state.todoItems.push(newTodo)  //ปุ่ม add
+    })
+  }
 
 render(){
-
-  let { currentTime } = this.setState
+  let{todoItems} = this.state
   return (
 
     <div>
-      <Header currentUser="Fluke" islogin />
-      <div>currentTime = {currentTime}</div>
-      <Footer onTimeClick={this.handleFooterClicked} />
+      <TodoInput onAddTodo={this.addTodo}/>
+      <TodoList items ={todoItems}/>
     </div>
     )
   }
