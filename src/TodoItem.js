@@ -1,4 +1,12 @@
 import React,{Component} from "react";
+import styled from 'styled-components'
+
+
+
+const Text = styled.span`
+    font-size: 48px;
+    color: ${props =>(props.completed ? 'red' : 'black')};
+`
 
 class TodoItem extends Component{
 
@@ -24,7 +32,7 @@ class TodoItem extends Component{
                 onClick={this.toggle}
                 />
                 
-             {this.state.done ? "Done: "+text : text}
+            <Text completed={this.state.done}>{text}</Text>
             </div>
         )
     }
